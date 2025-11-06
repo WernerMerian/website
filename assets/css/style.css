@@ -143,12 +143,23 @@ th {
 
 /* IMAGE */
 img {
+    display: block;
     max-width: 100%;
 }
-.photo {
+.portrait {
     border-radius: 100%;
     margin-bottom: 10px;
     max-width: 90%;
+}
+
+.photo {
+    position: relative;
+}
+.credits {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
 }
 
 /* LANGUAGES */
