@@ -32,7 +32,7 @@
 
     main {
 	float: none;
-        position: static;
+	position: static;
         width: auto;
     }
 
@@ -52,7 +52,7 @@
 
     .portrait {
 	float: right;
-        width: 120px;
+	width: 120px;
     }
 }
 
@@ -64,6 +64,6 @@
 
 @media print, screen and (max-width: 500px) {
     body {
-        padding: 10px;
+	padding: 10px;
     }
 }

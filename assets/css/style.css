@@ -25,6 +25,7 @@ body {
 aside {
     width: 250px;
     float: left;
+    position: fixed;
 }
 main {
     width: 550px;
