@@ -1,0 +1,296 @@
+/*
+H -> hue
+L -> luminosity
+S -> saturation
+clr -> color
+bg -> background
+hvr -> hover
+*/
+:root {
+    --code-d14: #d14;
+    --code-aa0000: #aa0000;
+    --code-990000: #990000;
+    --code-009999: #009999;
+    --code-008080: #008080;
+    --code-3c5d5d: #3c5d5d;
+    --code-009926: #009926;
+    --code-990073: #990073;
+    --code-800080: #800080;
+    --code-445588: #445588;
+    --code-000080: #000080;
+    --code-aaaaaa: #aaaaaa;
+    --code-999999: #999999;
+    --code-888888: #888888;
+    --code-555555: #555555;
+}
+
+:root {
+    --color-bg: hsl(0, 0%, var(--L-bg));
+    
+    --color-a-text: hsl(200, 100%, var(--L-a-text));
+    --color-a-text-hvr: hsl(200, 100%, calc(var(--L-a-text) * var(--L-a-text-hover-change)));
+    
+    --color-buttons-main-bg: hsl(0, 0%, var(--L-buttons-main-bg));
+    --color-buttons-main-border: hsl(0, 0%, var(--L-buttons-main-border));
+    --color-buttons-main-text: hsl(0, 0%, var(--L-buttons-main-text));
+    --color-buttons-main-text-hover: hsl(0, 6%, var(--L-buttons-main-text-hover));
+    
+    --color-h1: hsl(0, 0%, var(--L-h1));
+    --color-h2: hsl(0, 0%, var(--L-h2));
+    --color-h3: hsl(0, 0%, var(--L-h3));
+    --color-h4-to-h6: hsl(0, 0%, var(--L-h4-to-h6));
+
+    --color-text: hsl(0, 0%, var(--L-text));
+    --color-bold: hsl(0, 0%, var(--L-bold));
+    
+    --color-code-text: hsl(0, 0%, var(--L-code-text));
+    --color-code-bg: hsl(0, 0%, var(--L-code-bg));
+    --color-code-border: hsl(0, 0%, var(--L-code-border));
+    --color-code-bold-text: hsl(0, 0%, var(--L-code-bold-text));
+    
+    --color-kbd-bg: hsl(210, 25%, var(--L-kbd-bg));
+    --color-kbd-border: hsl(212.7, 10.7%, var(--L-kbd-border));
+    --color-kbd-border-bottom: hsl(210, 8.2%, var(--L-kbd-border-bottom));
+    --color-kbd-shadow: hsl(210, 8.2%, var(--L-kbd-shadow));
+    --color-kbd-text: hsl(210, 11.7%, var(--L-kbd-text));
+    
+    --color-splitter: hsl(0, 0%, var(--L-splitter));
+    --color-blockquote: hsl(0, 0%, var(--L-blockquote));
+    --color-section: hsl(0, 0%, var(--L-section));
+    
+    --color-small-in-a: hsl(0, 0%, var(--L-small-in-a));
+    --color-table-border-bottom: hsl(0, 0%, var(--L-table-border-bottom));
+    --color-table-header: hsl(0, 0%, var(--L-table-header));
+    --color-card-bg: hsl(0, 0%, var(--L-card-bg));
+    
+    color-scheme: dark;
+
+    --L-bg: 10%;
+    
+    --L-a-text: 60%;
+    --L-a-text-hover-change: 0.8;
+    
+    --L-buttons-main-bg: 17%;
+    --L-buttons-main-border: 26%;
+    --L-buttons-main-text: 76%;
+    --L-buttons-main-text-hover: 80%;
+    
+    --L-h1: 90%;
+    --L-h2: 86%;
+    --L-h3: 82%;
+    --L-h4-to-h6: 78%;
+    
+    --L-text: 75%;
+    --L-bold: 90%;
+    
+    --L-code-text: 80%;
+    --L-code-bg: 3%;
+    --L-code-border: 5%;
+    --L-code-bold-text: 100%;
+    
+    --L-kbd-bg: 30%;
+    --L-kbd-border: 45%;
+    --L-kbd-border-bottom: 55%;
+    --L-kbd-shadow: 55%;
+    --L-kbd-text: 100%;
+    
+    --L-splitter: 15%;
+    --L-blockquote: 15%;
+    --L-section: 15%;
+    
+    --L-small-in-a: 60%;
+    --L-table-border-bottom: 55%;
+    --L-table-header: 90%;
+    --L-card-bg: 15%;
+    
+    --color-w-text: var(--L-w-text);
+    --color-err-text: var(--L-err-text);
+    --color-err-bg: var(--L-err-bg);
+    --color-cd-text: var(--L-cd-text);
+    --color-cp-text: var(--L-cp-text);
+    --color-nt-text: var(--L-nt-text);
+    --color-nn-text: var(--L-nn-text);
+    --color-nc-text: var(--L-nn-text);
+    --color-no-text: var(--L-no-text);
+    --color-na-text: var(--L-na-text);
+    --color-o-text: var(--L-o-text);
+    --color-p-text: var(--L-p-text);
+    --color-gi-text: var(--L-gi-text);
+    --color-gd-text: var(--L-gd-text);
+    --color-gh-text: var(--L-gh-text);
+    --color-k-text: var(--L-k-text);
+    --color-kc-text: var(--L-kc-text);
+    --color-kt-text: var(--L-kt-text);
+    --color-kd-text: var(--L-kd-text);
+    --color-s-text: var(--L-s-text);
+    --color-sr-text: var(--L-sr-text);
+    --color-si-text: var(--L-si-text);
+    --color-se-text: var(--L-se-text);
+    --color-ss-text: var(--L-ss-text);
+    --color-m-text: var(--L-m-text);
+    
+    --L-w-text: hsl(60, 30%, 96%);
+    --L-err-text: hsl(231, 15%, 18%);
+    --L-err-bg: hsl(326, 100%, 74%);
+    --L-cd-text: hsl(0, 0%, 80%);
+    --L-cp-text: hsl(135, 94%, 65%);
+    --L-nt-text: hsl(135, 94%, 65%);
+    --L-nn-text: hsl(135, 94%, 65%);
+    --L-nc-text: hsl(135, 94%, 65%);
+    --L-no-text: hsl(135, 94%, 65%);
+    --L-na-text: hsl(191, 97%, 77%);
+    --L-o-text: hsl(135, 94%, 96%);
+    --L-p-text: hsl(135, 94%, 96%);
+    --L-gi-text: hsl(65, 92%, 76%);
+    --L-gd-text: hsl(31, 100%, 74%);
+    --L-gh-text: hsl(191, 97%, 77%);
+    --L-k-text: hsl(265, 89%, 78%);
+    --L-kc-text: hsl(31, 100%, 71%);
+    --L-kk-text: hsl(31, 100%, 71%);
+    --L-kd-text: hsl(31, 100%, 71%);
+    --L-s-text: hsl(65, 92%, 76%);
+    --L-sr-text: hsl(191, 97%, 77%);
+    --L-si-text: hsl(0, 100%, 67%);
+    --L-se-text: hsl(0, 100%, 67%);
+    --L-ss-text: hsl(65, 92%, 76%);
+    --L-m-text: hsl(65, 92%, 76%);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+	--L-bg: 10%;
+	
+        --L-a-text: 60%;
+	
+        --L-buttons-main-bg: 17%;
+        --L-buttons-main-border: 26%;
+        --L-buttons-main-text: 76%;
+        --L-buttons-main-text-hover: 80%;
+	
+        --L-h1: 90%;
+        --L-h2: 86%;
+	--L-h3: 82%;
+        --L-h4-to-h6: 78%;
+	
+        --L-text: 70%;
+	--L-bold: 90%;
+	
+        --L-code-text: 80%;
+        --L-code-bg: 3%;
+        --L-code-border: 5%;
+        --L-code-bold-text: 100%;
+	
+        --L-kbd-bg: 30%;
+        --L-kbd-border: 45%;
+        --L-kbd-border-bottom: 55%;
+	--L-kbd-shadow: 55%;
+        --L-kbd-text: 100%;
+	
+        --L-splitter: 15%;
+	--L-blockquote: 15%;
+	--L-section: 15%;
+        
+        --L-small-in-a: 60%;
+	--L-table-border-bottom: 55%;
+        --L-table-header: 90%;
+        --L-card-bg: 15%;
+	
+        --L-w-text: hsl(60, 30%, 96%);
+        --L-err-text: hsl(231, 15%, 18%);
+        --L-err-bg: hsl(326, 100%, 74%);
+        --L-cd-text: hsl(0, 0%, 80%);
+        --L-cp-text: hsl(135, 94%, 65%);
+        --L-nt-text: hsl(135, 94%, 65%);
+        --L-nn-text: hsl(135, 94%, 65%);
+        --L-nc-text: hsl(135, 94%, 65%);
+        --L-no-text: hsl(135, 94%, 65%);
+        --L-na-text: hsl(191, 97%, 77%);
+        --L-o-text: hsl(135, 94%, 96%);
+        --L-p-text: hsl(135, 94%, 96%);
+        --L-gi-text: hsl(65, 92%, 76%);
+        --L-gd-text: hsl(31, 100%, 74%);
+        --L-gh-text: hsl(191, 97%, 77%);
+        --L-k-text: hsl(265, 89%, 78%);
+        --L-kc-text: hsl(31, 100%, 71%);
+        --L-kk-text: hsl(31, 100%, 71%);
+        --L-kd-text: hsl(31, 100%, 71%);
+        --L-s-text: hsl(65, 92%, 76%);
+        --L-sr-text: hsl(191, 97%, 77%);
+        --L-si-text: hsl(0, 100%, 67%);
+        --L-se-text: hsl(0, 100%, 67%);
+        --L-ss-text: hsl(65, 92%, 76%);
+        --L-m-text: hsl(65, 92%, 76%);
+    }
+}
+
+@media print, (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+
+	--L-bg: 100%;
+	
+        --L-a-text: 35%;
+	
+        --L-buttons-main-bg: 96%;
+        --L-buttons-main-border: 88%;
+        --L-buttons-main-text: 40%;
+        --L-buttons-main-text-hover: 38%;
+	
+        --L-h1: 12%;
+        --L-h2: 20%;
+	--L-h3: 28%;
+        --L-h4-to-h6: 36%;
+	
+        --L-text: 45%;
+	--L-bold: 13%;
+	--L-text-bold: 36%;
+	
+        --L-code-text: 20%;
+        --L-code-bg: 97%;
+        --L-code-border: 90%;
+        --L-code-bold-text: 0%;
+	
+        --L-kbd-bg: 98%;
+        --L-kbd-border: 80%;
+        --L-kbd-border-bottom: 62%;
+	--L-kbd-shadow: 62%;
+        --L-kbd-text: 30%;
+	
+        --L-splitter: 90%;
+	--L-blockquote: 90%;
+	--L-section: 90%;
+	
+        --L-small-in-a: 47%;
+	--L-table-border-bottom: 62%;
+        --L-table-header: 27%;
+        --L-card-bg: 97%;
+	
+        --L-w-text: hsl(0, 0%, 20%);
+        --L-err-text: hsl(231, 15%, 78%);
+        --L-err-bg: hsl(326, 100%, 24%);
+        --L-cd-text: hsl(0, 0%, 20%);
+        --L-cp-text: hsl(135, 94%, 25%);
+        --L-nt-text: hsl(135, 94%, 25%);
+        --L-nn-text: hsl(135, 94%, 25%);
+        --L-nc-text: hsl(135, 94%, 25%);
+        --L-no-text: hsl(135, 94%, 25%);
+        --L-na-text: hsl(191, 97%, 37%);
+        --L-o-text: hsl(135, 94%, 16%);
+        --L-p-text: hsl(135, 94%, 16%);
+        --L-gi-text: hsl(130, 100%, 21%);
+        --L-gd-text: hsl(31, 100%, 24%);
+        --L-gh-text: hsl(191, 97%, 27%);
+        --L-k-text: hsl(265, 89%, 28%);
+        --L-kc-text: hsl(31, 100%, 21%);
+        --L-kk-text: hsl(31, 100%, 21%);
+        --L-kd-text: hsl(31, 100%, 21%);
+        --L-s-text: hsl(96, 94%, 20%);
+        --L-sr-text: hsl(191, 97%, 27%);
+        --L-si-text: hsl(0, 100%, 37%);
+        --L-se-text: hsl(0, 100%, 37%);
+        --L-ss-text: hsl(130, 100%, 21%);
+        --L-m-text: hsl(130, 100%, 21%);
+    }
+}

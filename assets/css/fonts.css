@@ -1,0 +1,58 @@
+/* VARIABLES */
+:root {
+    --font-title: "EBGaramond", serif;
+    --font-paragraph: sans-serif; /*"NotoSans", sans-serif;*/
+    --font-code: "NotoSansMono", monospace;
+}
+
+/* EB Garamond fonts */
+@font-face {
+    font-family: EBGaramond;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src:
+	url(/assets/fonts/EBGaramond/EBGaramond-Regular.woff2) format("woff2"),
+	url(/assets/fonts/EBGaramond/EBGaramond-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: EBGaramond;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src:
+	url(/assets/fonts/EBGaramond/EBGaramond-Medium.woff2) format("woff2"),
+	url(/assets/fonts/EBGaramond/EBGaramond-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: EBGaramond;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src:
+	url(/assets/fonts/EBGaramond/EBGaramond-SemiBold.woff2) format("woff2"),
+	url(/assets/fonts/EBGaramond/EBGaramond-SemiBold.woff) format("woff");
+}
+
+/* Noto fonts */
+@font-face {
+    font-family: NotoSans;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/fonts/Noto/NotoSans-Thin.woff2") format("woff2");
+}
+@font-face {
+    font-family: NotoSans;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/fonts/Noto/NotoSans-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: NotoSans;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("/assets/fonts/Noto/NotoSans-Medium.woff2") format("woff2");
+}

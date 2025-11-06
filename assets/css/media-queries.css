@@ -1,0 +1,69 @@
+/* 
+   1st width update at
+   860 (body width) + 2 * 60 (body padding)
+   = 980 px
+*/
+@media print, screen and (max-width: 980px) {
+    body {
+        width: 600px;
+    }
+    aside {
+        width: 200px;
+    }
+    main {
+        width: 375px;
+    }
+    #map {
+	width: 375px;
+	height: 250px;
+    }
+}
+
+/*
+  2nd width update at
+  600 (body width) + 2 * 60 (body padding)
+  = 720 px
+*/
+@media print, screen and (max-width: 720px) {
+    body {
+        word-wrap: break-word;
+	width: auto;
+    }
+
+    main {
+	float: none;
+        position: static;
+        width: auto;
+    }
+
+    #map {
+	width: auto;
+    }
+    
+    aside {
+        float: none;
+        position: static;
+        width: auto;
+    }
+
+    .language-bar {
+	text-align: left;
+    }
+
+    .photo {
+	float: right;
+        width: 120px;
+    }
+}
+
+/*
+  3rd width update at
+  260 (name width) + 120 (photo width) + 2 * 60 (body padding)
+  = 500 px
+*/
+
+@media print, screen and (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+}

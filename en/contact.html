@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Compatibility tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Alternative language versions -->
+    <link rel="alternate" hreflang="en" href="/en/contact.html" />
+    <link rel="alternate" hreflang="fr" href="/fr/contact.html" />
+    
+    <!-- Title and description -->
+    <title>Werner Mérian</title>
+    <meta name="description" content="Werner Mérian's personal webpage. I am Werner Mérian, a 1st-year PhD student in mathematical logic at Paris-Cité University (France)."> <!-- Google will cut off anything more than (roughly) 155 characters -->
+    <meta name="author" content="Werner Mérian">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- stylesheets leaflet (pour openstreetmap) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="">
+    </link>
+
+    <!-- script leaflet (pour openstreetmap) -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin="">
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  
+  <body>
+    <header>
+      <!-- Language selection bar -->
+      <div class="language-bar">
+        <a href="/fr/contact.html"><img class="language-flag" src="/assets/images/lang-fr.png" alt=""> Français</a> | 
+        <a href="/en/contact.html"><img class="language-flag" src="/assets/images/lang-en.png" alt=""> English</a>
+      </div>
+    </header>
+
+    <nav>
+    </nav>
+
+    <aside>
+      <!-- Photo and name -->
+      <p>
+        <img class="photo" src="/assets/images/photo.png" alt="Photo of Werner Mérian">
+        <h1>Werner Mérian</h1>
+      </p>
+      
+      <!-- Homepage -->
+      <p>
+        <i class="fa-solid fa-house"></i>
+        <a href="/en/index.html">Home</a><br>
+      </p>
+      
+      <!-- Quick contact -->
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        merian[at]imj-prg[dot]fr<br>
+        
+        <i class="fa-solid fa-key"></i>
+        <a href="/assets/doc/Werner-Merian-pgp-public-key.asc">My gpg public key</a><br>
+
+	<i class="fa-brands fa-orcid"></i>
+	<a href="//orcid.org/0009-0000-0260-3313">My ORCID iD</a><br>
+      </p>
+      
+      <!-- Quick presentation -->
+      <p>First-year PhD student in mathematical logic at Paris-Cité University (France)</p>
+
+      <!-- External links -->
+      <p>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <a href="/assets/doc/Werner-Merian-cv-en.pdf">Curriculum Vitae</a><br>
+        
+        <i class="fa-brands fa-github"></i>
+        &nbsp;<a href="//github.com/WernerMerian">GitHub</a>
+      </p>
+      
+      <!-- Navigation -->
+      <strong>Contents:</strong>
+      <ul class="content">
+        <li><a href="/en/about.html">About me</a></li>
+        <li><a href="/en/attended-courses.html">Attended courses</a></li>
+        <li><a href="/en/lecture-notes.html">Lecture notes</a></li>
+        <li><a href="/en/teaching.html">Teaching</a></li>
+        <li><a href="/en/research.html">Research</a></li>
+	<li><a href="/en/publications.html">Publications</a></li>
+        <li><a href="/en/contact.html">Contact</a></li>
+      </ul>
+      
+    </aside>
+    
+    <main>
+      <section>
+        <h1>Contact</h1>
+
+	<h2>How to contact me</h2>
+	<p>
+	  office phone: 00 33 1 57 27 91 80<br><br>
+	  
+          email: merian[at]imj-prg[dot]fr<br>
+	  <a href="/assets/doc/Werner-Merian-pgp-public-key.asc">My gpg public key</a>
+        </p>
+
+	<h2>Where to find me physically</h2>
+        <p>
+	  Institut de Mathématiques Jussieu–Paris Rive Gauche (IMJ-PRG)<br>
+	  Sophie Germain Building<br>
+	  Office 659, 6th Floor<br><br>
+	  
+	  8, Place Aurélie Nemours<br>
+	  75205 Paris CEDEX 13<br>
+	  FRANCE
+	</p>
+
+        <div id="map"></div>
+        <script>
+          var map = L.map('map').setView([48.8271655 , 2.3809580], 18);
+          
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(map);
+
+          var marker = L.marker([48.8271655 , 2.3809580])
+              .addTo(map)
+              .bindPopup('<b>Sophie Germain building</b><br>8 place Aurélie Nemours').openPopup();
+										</script>
+      </section>
+
+      <!-- Last update -->
+      <div class="last-update">
+	<small>
+          Last update:<br>
+          <time datetime="2025-06-05T00:39:00">June 5, 2025 at 12:39 a.m.</time>
+	</small>
+      </div>
+    </main>
+    
+    <footer>
+    </footer>
+
+    <a href="#" class="back-to-top" title="Back to top" accesskey="t">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+    
+  </body>
+</html>
