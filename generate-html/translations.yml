@@ -1,0 +1,59 @@
+en:
+  file_about:            about.html
+  file_attended_courses: attended-courses.html
+  file_contact:          contact.html
+  file_index:            index.html
+  file_lecture_notes:    lecture-notes.html
+  file_publication:      publications.html
+  file_research:         research.html
+  file_teaching:         teaching.html
+  
+  nav_title:             "Contents:"
+  nav_about:             "About me"
+  nav_attended_courses:  "Attended courses"
+  nav_home:              "Home"
+  nav_publication:       "Publications"
+  nav_contact:           "Contact"
+  nav_lecture_notes:     "Lecture notes"
+  nav_research:          "Research"
+  nav_teaching:          "Teaching"
+  
+  last_modified_label:   "Last modified:"
+  
+  portrait_alt_text:     "Photo of me"
+  
+  orcid_id_description:  "My ORCID iD"
+  
+  short_presentation:    "Second-year PhD student in mathematical logic at Paris-Cité University (France)"
+  
+  back_to_top:           "Back to top"
+
+fr:
+  file_about:            a-propos.html
+  file_attended_courses: cours-suivis.html
+  file_contact:          contact.html
+  file_index:            index.html
+  file_lecture_notes:    notes-de-cours.html
+  file_publication:      publications.html
+  file_research:         recherche.html
+  file_teaching:         enseignement.html
+  
+  nav_title:             "Sommaire&nbsp;:"
+  nav_about:             "À propos de moi"
+  nav_attended_courses:  "Cours suivis"
+  nav_home:              "Accueil"
+  nav_publication:       "Publications"
+  nav_contact:           "Contact"
+  nav_lecture_notes:     "Notes de cours"
+  nav_research:          "Recherche"
+  nav_teaching:          "Enseignement"
+  
+  last_modified_label:   "Dernière modification&nbsp;:"
+  
+  portrait_alt_text:     "Photo de moi"
+  
+  orcid_id_description:  "Mon identifiant ORCID"
+  
+  short_presentation:    "Doctorant en 2ème année en logique mathématique à l'université Paris Cité"
+  
+  back_to_top:           "Haut de page"

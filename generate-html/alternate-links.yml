@@ -1,0 +1,19 @@
+en:
+  about.html:            a-propos.html
+  attended-courses.html: cours-suivis.html
+  contact.html:          contact.html
+  index.html:            index.html
+  lecture-notes.html:    notes-de-cours.html
+  publications.html:     publications.html
+  research.html:         recherche.html
+  teaching.html:         enseignement.html
+
+fr:
+  a-propos.html:         about.html
+  cours-suivis.html:     attended-courses.html
+  contact.html:          contact.html
+  index.html:            index.html
+  notes-de-cours.html:   lecture-notes.html
+  publications.html:     publications.html
+  recherche.html:        research.html
+  enseignement.html:     teaching.html

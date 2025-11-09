@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <!-- Compatibility tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Alternative language versions -->
+    <link rel="alternate" hreflang="en" href="/en/{{ alternate_link_en }}" />
+    <link rel="alternate" hreflang="fr" href="/fr/{{ alternate_link_fr }}" />
+    
+    <!-- Title and description -->
+    <title>Werner Mérian</title>
+    <meta name="description" content="Werner Mérian's personal webpage. I am Werner Mérian, a 2nd-year PhD student in mathematical logic at Paris Cité University (France)."> <!-- Google will cut off anything more than (roughly) 155 characters -->
+    <meta name="author" content="Werner Mérian">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Extra head -->
+{{ extra_head }}
+  </head>
+  
+  <body>
+    <header>
+      <!-- Language selection bar -->
+      <div class="language-bar">
+        <a href="/fr/{{ alternate_link_fr }}"><img class="language-flag" src="/assets/images/lang-fr.png" alt=""> Français</a> | 
+        <a href="/en/{{ alternate_link_en }}"><img class="language-flag" src="/assets/images/lang-en.png" alt=""> English</a>
+      </div>
+    </header>
+    
+    <nav>
+    </nav>
+    
+    <aside>
+      <!-- Photo and name -->
+      <p>
+        <img class="portrait" src="/assets/images/photo-portrait.png" alt="{{ portrait_alt_text }}">
+        <h1>Werner Mérian</h1>
+      </p>
+      
+      <!-- Homepage -->
+      <p>
+        <i class="fa-solid fa-house"></i>
+        <a href="/{{ lang }}/{{ file_index }}">{{ nav_home }}</a><br>
+      </p>
+      
+      <!-- Quick contact -->
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:merian[at]imj-prg[dot]fr">merian[at]imj-prg[dot]fr</a><br>
+
+	<i class="fa-brands fa-orcid"></i>
+	<a href="//orcid.org/0009-0000-0260-3313">{{ orcid_id_description }}</a><br>
+      </p>
+      
+      <!-- Short presentation -->
+      <p>{{ short_presentation }}</p>
+
+      <!-- External links -->
+      <p>
+        <i class="fa-solid fa-graduation-cap"></i>
+        <a href="/assets/doc/Werner-Merian-cv-{{ lang }}.pdf">Curriculum Vitae</a><br>
+        
+        <i class="fa-brands fa-github"></i>
+        &nbsp;<a href="//github.com/WernerMerian">GitHub</a>
+      </p>
+      
+      <!-- Navigation -->
+      <strong>{{ nav_title }}</strong>
+      <ul class="content">
+	<li><a href="/{{ lang }}/{{ file_about }}">{{ nav_about }}</a></li>
+        <li><a href="/{{ lang }}/{{ file_attended_courses }}">{{ nav_attended_courses }}</a></li>
+        <li><a href="/{{ lang }}/{{ file_lecture_notes }}">{{ nav_lecture_notes }}</a></li>
+        <li><a href="/{{ lang }}/{{ file_teaching }}">{{ nav_teaching }}</a></li>
+        <li><a href="/{{ lang }}/{{ file_research }}">{{ nav_research }}</a></li>
+	<li><a href="/{{ lang }}/{{ file_publication }}">{{ nav_publication }}</a></li>
+        <li><a href="/{{ lang }}/{{ file_contact }}">{{ nav_contact }}</a></li>
+      </ul>
+      
+    </aside>
+
+    <main>
+{{ content }}
+
+      <!-- Last modified -->
+      <div class="last-modified">
+	<small>
+          {{ last_modified_label }}<br>
+          <time datetime="{{ last_modified_machine }}">{{ last_modified_human }}</time>
+	</small>
+      </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- "Back to top" button -->
+    <a href="#" class="back-to-top" title="{{ back_to_top }}">&uarr;</a>
+
+    <!-- Extra scripts -->
+{{ extra_scripts }}
+    
+  </body>
+</html>
