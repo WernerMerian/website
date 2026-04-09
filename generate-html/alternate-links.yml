@@ -3,17 +3,29 @@ en:
   attended-courses.html: cours-suivis.html
   contact.html:          contact.html
   index.html:            index.html
+  latex.html:            latex.html
   lecture-notes.html:    notes-de-cours.html
   publications.html:     publications.html
   research.html:         recherche.html
+  sport.html:            sport.html
   teaching.html:         enseignement.html
+  
+  latex/blog.html:        latex/blog.html
+  latex/masterclass.html: latex/masterclass.html
+  latex/packages.html:    latex/packages.html
 
 fr:
   a-propos.html:         about.html
   cours-suivis.html:     attended-courses.html
   contact.html:          contact.html
-  index.html:            index.html
-  notes-de-cours.html:   lecture-notes.html
-  publications.html:     publications.html
-  recherche.html:        research.html
   enseignement.html:     teaching.html
+  index.html:            index.html
+  latex.html:            latex.html
+  publications.html:     publications.html
+  notes-de-cours.html:   lecture-notes.html
+  recherche.html:        research.html
+  sport.html:            sport.html
+  
+  latex/blog.html:        latex/blog.html
+  latex/masterclass.html: latex/masterclass.html
+  latex/packages.html:    latex/packages.html

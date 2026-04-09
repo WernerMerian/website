@@ -1,0 +1,60 @@
+<section>
+  
+  <h1>My LaTeX packages</h1>
+  
+  <p>
+    This directory regroups the different LaTeX snippets that I have coded myself, whether to solve some issues I identified in the LaTeX2e kernel, to implement additional features or to automatize tasks that I use to do in the preamble of each of my LaTeX projects.
+  </p>
+
+  <p>
+    Generally speaking, I try to design my packages and their features to be as modular as possible, allowing each package to be imported and used as independently as possible.
+  </p>
+
+  <p>
+    I am particularly attached to the historical tradition of LaTeX, especially regarding package writing. Thus, all my packages follow the traditional <i>Documented LaTeX sources</i> format (<code>.dtx</code> files) and are designed to be readable, maintainable, and well documented. My work closely follows the excellent guide by Scott Pakin on writing <code>.dtx</code> files, and is inspired by the style and conventions promoted by David Carlisle and Frank Mittelbach.
+  </p>
+
+  <p>
+    Users who wish to build one of the package from source can download the full archive containing the <code>.dtx</code> and <code>.ins</code> files.
+  </p>
+  
+  <h2>crefprefix</h2>
+  
+  <p>
+    This package adds the ability to have numeric prefixes specific to references produced by <code>cleveref</code> independently of the numeric prefixes used by references produced by basic LaTeX, in order to allow two distinct behaviors depending on whether the <code>\ref</code> command or the <code>\cref</code> command is executed.
+  </p>
+
+  <ul>
+    <li>Latest release: v0.6 (2026-01-08)</li>
+    <li>Documentation: crefprefix.pdf</li>
+    <li>Package: crefprefix.sty</li>
+    <li>Complete source: crefprefix.tar.gz</li>
+  </ul>
+
+  <h2>enuminthm</h2>
+  
+  <p>
+    This package automatizes the configuration of <code>enumerate</code> environments inside a theorem-like environment. More precisely, it automatizes the formating of items inside a theorem, it makes the <code>cleveref</code>-type of these items an alias for the <code>cleveref</code>-type of the surrounding theorem-like environment, and it sets the <code>cleveref</code> numeric prefix of these items to be the value of the surrounding theorem-like environment.
+  </p>
+
+  <ul>
+    <li>Latest release: v0.3 (2026-03-07)</li>
+    <li>Documentation: enuminthm.pdf</li>
+    <li>Package: enuminthm.sty</li>
+    <li>Complete source: enuminthm.tar.gz</li>
+  </ul>
+
+  <h2>refcustomitem</h2>
+  
+  <p>
+    This package allows referencing an item in a numbered list (such as <code>enumerate</code>) whose label has been customised (via the optional parameter of <code>\item</code>), which is not currently possible in basic LaTeX.
+  </p>
+
+  <ul>
+    <li>Latest release: v0.6 (2026-03-06)</li>
+    <li>Documentation: refcustomitem.pdf</li>
+    <li>Package: refcustomitem.sty</li>
+    <li>Complete source: refcustomitem.tar.gz</li>
+  </ul>
+  
+</section>

@@ -6,5 +6,7 @@ site: clean
 serve: site
 	python -m http.server -d _site 8080
 
+deploy: site
+	zip -r website.zip _site/
 clean:
-	rm -rf _site
+	rm -rf _site website.zip

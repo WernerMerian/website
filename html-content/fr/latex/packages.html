@@ -1,0 +1,60 @@
+<section>
+  
+  <h1>Mes packages LaTeX</h1>
+
+  <p>
+    Ce répertoire regroupe les différents snippets LaTeX que j'ai moi-même codés, que ce soit pour résoudre certains problèmes que j'ai identifiés dans le noyau de LaTeX2e, pour implémenter des fonctionnalités supplémentaires ou pour automatiser des tâches que j'avais l'habitude d'effectuer dans le préambule de chacun de mes projets LaTeX.
+  </p>
+  
+  <p>
+    De manière générale, j'essaie de concevoir mes packages et leurs fonctionnalités de manière à ce qu'ils soient aussi modulaires que possible, ce qui permet à chaque package d'être importé et utilisé de la manière la plus indépendante possible.
+  </p>
+  
+  <p>
+    Je suis particulièrement attaché à la tradition historique de LaTeX, notamment en ce qui concerne l'écriture des packages. Ainsi, tous mes packages respectent le format traditionel <i>Documented LaTeX sources</i> (fichiers <code>.dtx</code>) et sont conçus pour être lisibles, faciles à maintenir et bien documentés. Mon travail suit de près l'excellent guide de Scott Pakin sur la rédaction de fichiers <code>.dtx</code>, et s'inspire du style et des conventions promus par David Carlisle et Frank Mittelbach.
+  </p>
+  
+  <p>
+    Les utilisateurs qui souhaitent compiler un des packages à partir du code source peuvent télécharger l'archive complète contenant les fichiers <code>.dtx</code> et <code>.ins</code>.
+  </p>
+  
+  <h2>crefprefix</h2>
+  
+  <p>
+    Ce package ajoute la possibilité d'avoir des préfixes numériques propres aux références produites par <code>cleveref</code> indépendamment des préfixes numériques utilisés par les références produites par LaTeX de base, afin de permettre deux comportements distincts selon que l'on exécute la commande <code>\ref</code> ou la commande <code>\cref</code>.
+  </p>
+
+  <ul>
+    <li>Dernière release: v0.6 (2026-01-08)</li>
+    <li>Documentation: crefprefix.pdf</li>
+    <li>Package: crefprefix.sty</li>
+    <li>Source complète: crefprefix.tar.gz</li>
+  </ul>
+
+  <h2>enuminthm</h2>
+  
+  <p>
+    Ce package automatise la configuration des environnements <code>enumerate</code> au sein d'un environnement de type théorème. Plus précisément, il automatise la mise en forme des items à l'intérieur d'un théorème, fait en sorte que le type <code>cleveref</code> de ces items soit un alias du type <code>cleveref</code> de l'environnement de type théorème qui les entoure, et définit le préfixe numérique <code>cleveref</code> de ces items comme étant la valeur de l'environnement de type théorème qui les entoure.
+  </p>
+
+  <ul>
+    <li>Dernière release: v0.3 (2026-03-07)</li>
+    <li>Documentation: enuminthm.pdf</li>
+    <li>Package: enuminthm.sty</li>
+    <li>Source complète: enuminthm.tar.gz</li>
+  </ul>
+
+  <h2>refcustomitem</h2>
+  
+  <p>
+    Ce paquet permet de faire référence à un item d'une liste numérotée (telle que <code>enumerate</code>) dont l'étiquette a été personnalisée (via le paramètre optionnel de <code>\item</code>), ce qui n'est actuellement pas possible dans LaTeX de base.
+  </p>
+
+  <ul>
+    <li>Dernière release: v0.6 (2026-03-06)</li>
+    <li>Documentation: refcustomitem.pdf</li>
+    <li>Package: refcustomitem.sty</li>
+    <li>Source complète: refcustomitem.tar.gz</li>
+  </ul>
+  
+</section>
