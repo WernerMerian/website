@@ -65,10 +65,11 @@ def get_last_modified(file_path, lang):
 
 def get_lang_and_filename(path):
     """Déduit la langue (fr/en) et le nom de fichier à partir du chemin complet."""
-    parts = os.path.normpath(path).split(os.sep)
-    if len(parts) >= 3:
-        lang = parts[-2]
-        filename = os.path.basename(path)
+    relative_path = os.path.relpath(path, CONTENT_DIR)
+    parts = os.path.normpath(relative_path).split(os.sep)
+    if len(parts) >= 2:
+        lang = parts[0]
+        filename = parts[-1]
         return lang, filename
     exit(1)
 
@@ -142,10 +143,10 @@ def main():
             if not file.endswith('.html'):
                 continue
             content_path = os.path.join(root, file)
+            html = build_page(template, content_path, translations, alternate_links)
+
             relative_path = os.path.relpath(content_path, CONTENT_DIR)
             output_path = os.path.join(OUTPUT_DIR, relative_path)
-            
-            html = build_page(template, content_path, translations, alternate_links)
             write_output(output_path, html)
             print(f"Fichier '{output_path}' généré avec succès")
 
