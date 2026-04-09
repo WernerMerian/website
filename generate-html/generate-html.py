@@ -63,14 +63,14 @@ def get_last_modified(file_path, lang):
     date_machine = date.isoformat(timespec='minutes')
     return date_human, date_machine
 
-def get_lang_and_filename(path):
-    """Déduit la langue (fr/en) et le nom de fichier à partir du chemin complet."""
-    relative_path = os.path.relpath(path, CONTENT_DIR)
-    parts = os.path.normpath(relative_path).split(os.sep)
+def extract_lang_path(path):
+    """Extrait la langue (fr/en) et du reste du chemin du fichier."""
+    root_path = os.path.relpath(path, CONTENT_DIR)
+    parts = os.path.normpath(root_path).split(os.sep)
     if len(parts) >= 2:
         lang = parts[0]
-        filename = parts[-1]
-        return lang, filename
+        path_from_lang = '/'.join(parts[1:])
+        return lang, path_from_lang
     exit(1)
 
 # --- BUILD PAGE ---
@@ -82,15 +82,15 @@ def build_page(template, content_path, translations, alternate_links):
     content = textwrap.indent(content, '      ')
     
     # Extract info from path
-    lang, filename = get_lang_and_filename(content_path)
+    lang, path_from_lang = extract_lang_path(content_path)
 
     # Reading extra head (if exists)
-    extra_head = read_extra_head(EXTRA_HEAD_DIR + f'{lang}/' + filename)
+    extra_head = read_extra_head(EXTRA_HEAD_DIR + f'{lang}/' + path_from_lang)
     # Indente l'extra head pour qu'il soit bien aligné dans le template
     extra_head = textwrap.indent(extra_head, '      ')
 
     # Reading extra scripts (if exists)
-    extra_scripts = read_extra_scripts(EXTRA_SCRIPTS_DIR + f'{lang}/' + filename)
+    extra_scripts = read_extra_scripts(EXTRA_SCRIPTS_DIR + f'{lang}/' + path_from_lang)
     # Indente l'extra scripts pour qu'il soit bien aligné dans le template
     extra_scripts = textwrap.indent(extra_scripts, '    ')
 
@@ -99,11 +99,11 @@ def build_page(template, content_path, translations, alternate_links):
 
     # Injecting alternate links
     if lang == 'fr':
-        page = page.replace('{{ alternate_link_en }}', alternate_links['fr'][filename])
-        page = page.replace('{{ alternate_link_fr }}', filename)
+        page = page.replace('{{ alternate_link_en }}', alternate_links['fr'][path_from_lang])
+        page = page.replace('{{ alternate_link_fr }}', path_from_lang)
     if lang == 'en':
-        page = page.replace('{{ alternate_link_en }}', filename)
-        page = page.replace('{{ alternate_link_fr }}', alternate_links['en'][filename])
+        page = page.replace('{{ alternate_link_en }}', path_from_lang)
+        page = page.replace('{{ alternate_link_fr }}', alternate_links['en'][path_from_lang])
     # Injecting extra head
     page = page.replace('{{ extra_head }}', extra_head)
     # Injecting static language-dependent text according to the .yaml file
