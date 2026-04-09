@@ -40,19 +40,50 @@
 	width: auto;
     }
     
-    aside {
-        float: none;
-        position: static;
-        width: auto;
-    }
-
     .language-bar {
-	text-align: left;
+	text-align: right;
     }
 
     .portrait {
 	float: right;
 	width: 120px;
+    }
+    
+    .burger {
+	display: block;
+    }
+    
+    aside {
+	position: fixed;
+	
+	top: 0;
+	left: -260px;
+	
+	width: 260px;
+	height: 100%;
+	
+	background: var(--color-bg);
+	
+	overflow-y: auto;
+	
+	transition: left 0.3s ease;
+	
+	z-index: 1000;
+	
+	padding-top: 60px;
+    }
+
+    #menu-toggle:checked ~ aside {
+	left: 0;
+    }
+    
+    
+    #menu-toggle:checked ~ .overlay {
+	display: block;
+    }
+    
+    main {
+	margin-left: 0;
     }
 }
 

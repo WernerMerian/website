@@ -203,3 +203,44 @@ img {
     width: 550px;
     height: 400px;
 }
+
+/* BURGER MENU */
+
+#menu-toggle {
+    display: none;
+}
+.burger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+
+  font-size: 24px;
+  line-height: 1;
+
+  padding: 8px 12px;
+
+  border-radius: 3px;
+  opacity: 0.5;
+  color: var(--color-buttons-main-text);
+  background-color: var(--color-buttons-main-bg);
+
+  cursor: pointer;
+
+  z-index: 1001;
+
+  display: none;   /* hided by default */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.3);
+
+  z-index: 900;
+
+  display: none;
+}

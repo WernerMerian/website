@@ -26,7 +26,16 @@
   </head>
   
   <body>
+    <!-- Checkbox hack for the burger -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="overlay"></label>
+    
     <header>
+      <!-- Burger button -->
+      <label for="menu-toggle" class="burger">
+	<i class="fa-solid fa-bars"></i>
+      </label>
+      
       <!-- Language selection bar -->
       <div class="language-bar">
         <a href="/fr/{{ alternate_link_fr }}"><img class="language-flag" src="/assets/images/lang-fr.png" alt=""> Français</a> | 
@@ -80,6 +89,8 @@
         <li><a href="/{{ lang }}/{{ file_teaching }}">{{ nav_teaching }}</a></li>
         <li><a href="/{{ lang }}/{{ file_research }}">{{ nav_research }}</a></li>
 	<li><a href="/{{ lang }}/{{ file_publication }}">{{ nav_publication }}</a></li>
+	<li><a href="/{{ lang }}/{{ file_latex }}">{{ nav_latex }}</a></li>
+	<li><a href="/{{ lang }}/{{ file_sport }}">{{ nav_sport }}</a></li>
         <li><a href="/{{ lang }}/{{ file_contact }}">{{ nav_contact }}</a></li>
       </ul>
       
@@ -101,7 +112,7 @@
     </footer>
 
     <!-- "Back to top" button -->
-    <a href="#" class="back-to-top" title="{{ back_to_top }}">&uarr;</a>
+    <!--<a href="#" class="back-to-top" title="{{ back_to_top }}">&uarr;</a>-->
 
     <!-- Extra scripts -->
 {{ extra_scripts }}
