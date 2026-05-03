@@ -41,53 +41,54 @@
     </nav>
     
     <aside>
-      <!-- Photo and name -->
-      <p>
-        <img class="portrait" src="/assets/images/photo-portrait.png" alt="{{ portrait_alt_text }}">
-        <h1>Werner Mérian</h1>
-      </p>
-      
-      <!-- Homepage -->
-      <p>
-        <i class="fa-solid fa-house"></i>
-        <a href="/{{ lang }}/{{ file_index }}">{{ nav_home }}</a><br>
-      </p>
-      
-      <!-- Quick contact -->
-      <p>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:merian[at]imj-prg[dot]fr">merian[at]imj-prg[dot]fr</a><br>
+      <div class="sidebar">
+	<!-- Photo and name -->
+	<p>
+          <img class="portrait" src="/assets/images/photo-portrait.png" alt="{{ portrait_alt_text }}">
+          <h1>Werner Mérian</h1>
+	</p>
+	
+	<!-- Homepage -->
+	<p>
+          <i class="fa-solid fa-house"></i>
+          <a href="/{{ lang }}/{{ file_index }}">{{ nav_home }}</a><br>
+	</p>
+	
+	<!-- Quick contact -->
+	<p>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:merian[at]imj-prg[dot]fr">merian[at]imj-prg[dot]fr</a><br>
 
-	<i class="fa-brands fa-orcid"></i>
-	<a href="//orcid.org/0009-0000-0260-3313">{{ orcid_id_description }}</a><br>
-      </p>
-      
-      <!-- Short presentation -->
-      <p>{{ short_presentation }}</p>
+	  <i class="fa-brands fa-orcid"></i>
+	  <a href="//orcid.org/0009-0000-0260-3313">{{ orcid_id_description }}</a><br>
+	</p>
+	
+	<!-- Short presentation -->
+	<p>{{ short_presentation }}</p>
 
-      <!-- External links -->
-      <p>
-        <i class="fa-solid fa-graduation-cap"></i>
-        <a href="/assets/doc/Werner-Merian-cv-{{ lang }}.pdf">Curriculum Vitae</a><br>
-        
-        <i class="fa-brands fa-github"></i>
-        &nbsp;<a href="//github.com/WernerMerian">GitHub</a>
-      </p>
-      
-      <!-- Navigation -->
-      <strong>{{ nav_title }}</strong>
-      <ul class="content">
-	<li><a href="/{{ lang }}/{{ file_about }}">{{ nav_about }}</a></li>
-        <li><a href="/{{ lang }}/{{ file_attended_courses }}">{{ nav_attended_courses }}</a></li>
-        <li><a href="/{{ lang }}/{{ file_lecture_notes }}">{{ nav_lecture_notes }}</a></li>
-        <li><a href="/{{ lang }}/{{ file_teaching }}">{{ nav_teaching }}</a></li>
-        <li><a href="/{{ lang }}/{{ file_research }}">{{ nav_research }}</a></li>
-	<li><a href="/{{ lang }}/{{ file_publication }}">{{ nav_publication }}</a></li>
-	<li><a href="/{{ lang }}/{{ file_latex }}">{{ nav_latex }}</a></li>
-	<li><a href="/{{ lang }}/{{ file_sport }}">{{ nav_sport }}</a></li>
-        <li><a href="/{{ lang }}/{{ file_contact }}">{{ nav_contact }}</a></li>
-      </ul>
-      
+	<!-- External links -->
+	<p>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <a href="/assets/doc/Werner-Merian-cv-{{ lang }}.pdf">Curriculum Vitae</a><br>
+          
+          <i class="fa-brands fa-github"></i>
+          &nbsp;<a href="//github.com/WernerMerian">GitHub</a>
+	</p>
+	
+	<!-- Navigation -->
+	<strong>{{ nav_title }}</strong>
+	<ul class="content">
+	  <li><a href="/{{ lang }}/{{ file_about }}">{{ nav_about }}</a></li>
+          <li><a href="/{{ lang }}/{{ file_attended_courses }}">{{ nav_attended_courses }}</a></li>
+          <li><a href="/{{ lang }}/{{ file_lecture_notes }}">{{ nav_lecture_notes }}</a></li>
+          <li><a href="/{{ lang }}/{{ file_teaching }}">{{ nav_teaching }}</a></li>
+          <li><a href="/{{ lang }}/{{ file_research }}">{{ nav_research }}</a></li>
+	  <li><a href="/{{ lang }}/{{ file_publication }}">{{ nav_publication }}</a></li>
+	  <li><a href="/{{ lang }}/{{ file_latex }}">{{ nav_latex }}</a></li>
+	  <li><a href="/{{ lang }}/{{ file_sport }}">{{ nav_sport }}</a></li>
+          <li><a href="/{{ lang }}/{{ file_contact }}">{{ nav_contact }}</a></li>
+	</ul>
+      </div>
     </aside>
 
     <main>

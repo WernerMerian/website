@@ -22,10 +22,13 @@ aside {
 
     padding-top: 60px;
 
-    height: calc(100vh - 85px);
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
+}
+.sidebar {
+    padding-bottom: 250px;
 }
 main {
     width: 550px;

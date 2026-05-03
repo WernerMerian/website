@@ -57,27 +57,22 @@
     aside {
 	position: fixed;
 	
-	top: 0;
-	left: -260px;
-	
 	width: 260px;
-	height: 100%;
+	padding: 10px;
+
+	top: 0;
+	left: -280px; /* -(width+2*padding) */
 	
 	background: var(--color-bg);
-	
-	overflow-y: auto;
 	
 	transition: left 0.3s ease;
 	
 	z-index: 1000;
-	
-	padding-top: 60px;
     }
 
     #menu-toggle:checked ~ aside {
 	left: 0;
     }
-    
     
     #menu-toggle:checked ~ .overlay {
 	display: block;
