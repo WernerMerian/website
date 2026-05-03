@@ -169,7 +169,8 @@ img {
     position: relative;
     margin: 0 0 30px;
 }
-.credits {
+figcaption {
+    font-size: small;
     text-align: right;
 }
 
