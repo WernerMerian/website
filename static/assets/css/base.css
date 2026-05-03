@@ -11,9 +11,6 @@ body {
     background-color: var(--color-bg);
     
     font-family: var(--font-paragraph);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4em;
 }
 aside {
     width: 250px;
