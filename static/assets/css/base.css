@@ -24,8 +24,6 @@ aside {
 main {
     width: 550px;
     float: right;
-
-    text-align: justify;
 }
 
 /* TITLES */
@@ -56,6 +54,9 @@ h4, h5, h6 {
 /* COMPONENTS */
 p, ul, ol, table, pre, dl {
     margin: 0 0 20px;
+}
+main p {
+    text-align: justify;
 }
 ul.content {
     margin-left: -1.4em;
