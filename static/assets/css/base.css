@@ -6,7 +6,6 @@ body {
     width: 860px;
     
     margin: 0 auto;
-    padding: 60px;
     
     color: var(--color-text);
     background-color: var(--color-bg);
@@ -20,10 +19,19 @@ aside {
     width: 250px;
     float: left;
     position: fixed;
+
+    padding-top: 60px;
+
+    height: calc(100vh - 85px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 main {
     width: 550px;
     float: right;
+
+    padding-top: 60px;
 }
 
 /* TITLES */
