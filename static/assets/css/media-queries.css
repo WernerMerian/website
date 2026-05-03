@@ -28,6 +28,7 @@
     body {
         word-wrap: break-word;
 	width: auto;
+	padding: 10px;
     }
 
     main {
@@ -94,7 +95,7 @@
 */
 
 @media print, screen and (max-width: 500px) {
-    body {
-	padding: 10px;
+    main p {
+	text-align: left;
     }
 }
