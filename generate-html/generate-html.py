@@ -1,6 +1,8 @@
 import os
+import shutil
 import textwrap
 import yaml
+import re
 from babel.dates import format_datetime
 from datetime import datetime
 
@@ -73,6 +75,31 @@ def extract_lang_path(path):
         return lang, path_from_lang
     exit(1)
 
+# --- SUBSTITUTION PIPELINES ---
+
+def apply_filter(value, filter_name, filter_arg_str):
+    if filter_name != "format":
+        raise ValueError(f"Unknown filter: {filter_name}")
+
+    # args := 'var=expr'
+    arg_pattern = re.compile(r"(\w+)\s*=\s*'([^']*)'")
+    kwargs = dict(arg_pattern.findall(filter_arg_str))
+    print(kwargs)
+    return value.format(**kwargs)
+
+def subst_pipeline(page, context):
+    def replacer(match):
+        # replacer est forcément du type match -> expr, donc on peut pas lui passer "translations[lang]" comme argument, ce qui aurait été bien plus élégant
+        base_var_name = match.group(1)
+        filter_name = match.group(2)
+        filter_args = match.group(3)
+        
+        base_expr = context[base_var_name]
+        return apply_filter(base_expr, filter_name, filter_args)
+
+    subst_pipeline_pattern = re.compile(r"\{\{\s*(\w+)\s*\|\s*(\w+)\((.*?)\)\s*\}\}")
+    return re.sub(subst_pipeline_pattern, replacer, page)
+
 # --- BUILD PAGE ---
 
 def build_page(template, content_path, translations, alternate_links):
@@ -106,7 +133,9 @@ def build_page(template, content_path, translations, alternate_links):
         page = page.replace('{{ alternate_link_fr }}', alternate_links['en'][path_from_lang])
     # Injecting extra head
     page = page.replace('{{ extra_head }}', extra_head)
-    # Injecting static language-dependent text according to the .yaml file
+    # Expand substitution pipelines
+    page = subst_pipeline(page, translations[lang])
+    # Injecting static language-dependent text according to the .yml file
     page = page.replace('{{ lang }}', lang)
     for key, value in translations[lang].items():
         placeholder = f"{{{{ {key} }}}}"   # --> produit une vraie chaîne "{{ key }}"
@@ -125,7 +154,7 @@ def build_page(template, content_path, translations, alternate_links):
     
     return page
 
-def write_output(output_path, html):
+def write_html_output(output_path, html):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
@@ -140,15 +169,31 @@ def main():
 
     for root, _, files in os.walk(CONTENT_DIR):
         for file in files:
-            if not file.endswith('.html'):
-                continue
             content_path = os.path.join(root, file)
-            html = build_page(template, content_path, translations, alternate_links)
-
             relative_path = os.path.relpath(content_path, CONTENT_DIR)
             output_path = os.path.join(OUTPUT_DIR, relative_path)
-            write_output(output_path, html)
-            print(f"Fichier '{output_path}' généré avec succès")
+            
+            if file.endswith('.html'):
+                html = build_page(template, content_path, translations, alternate_links)
+                write_html_output(output_path, html)
+                print(f"Fichier HTML '{output_path}' généré avec succès")
+            elif not file.endswith('~'):
+                # if not html, then just copy-paste content
+
+                # First check if it's a symlink
+                if os.path.islink(content_path):
+                    target_path = os.readlink(content_path)
+
+                    # If the link is absolute, do nothing. If it's relative, resolve it correctly so that it corresponds to the script's directory (which is different from the directory where the symlink is located).
+                    if os.path.isabs(target_path):
+                        content_path = target_path
+                    else:
+                        content_path = os.path.join(root, target_path)
+
+                os.makedirs(os.path.dirname(output_path), exist_ok=True)
+                shutil.copy(content_path, output_path)
+
+                print(f"Fichier '{output_path}' copié avec succès")
 
 if __name__ == '__main__':
     main()
